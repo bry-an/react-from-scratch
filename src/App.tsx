@@ -1,14 +1,15 @@
-import { Router } from "@reach/router";
+import { Link, Router } from "@reach/router";
 import React, { lazy, Suspense } from "react";
-import NavBar from "./Navbar.js";
-import SearchParams from "./SearchParams.js";
+import SearchParams from "./SearchParams.jsx";
 
-const Details = lazy(() => import("./Details.js"));
+const Details = lazy(() => import("./Details.jsx"));
 const App = () => {
   return (
     <React.StrictMode>
       <div>
-        <NavBar />
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
         <Suspense fallback={<h1>Loading route...</h1>}>
           <Router>
             <SearchParams path="/" />

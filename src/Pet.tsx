@@ -1,5 +1,17 @@
-import React from "react";
-export default function Pet({ animal, name, breed, media, id, location }) {
+import { Photo } from "@frontendmasters/pet";
+import React, { FunctionComponent } from "react";
+
+interface IProps {
+  name: string;
+  animal: string;
+  breed: string;
+  media: Photo[];
+  location: string;
+  id: number;
+}
+
+const Pet: FunctionComponent<IProps> = (props) => {
+  const { animal, name, breed, media, id, location } = props;
   let hero = "http://placecorgi.com/300/300";
   if (media.length) {
     hero = media[0].small;
@@ -15,4 +27,4 @@ export default function Pet({ animal, name, breed, media, id, location }) {
       </div>
     </a>
   );
-}
+};
