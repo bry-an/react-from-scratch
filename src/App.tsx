@@ -1,8 +1,8 @@
 import { Link, Router } from "@reach/router";
 import React, { lazy, Suspense } from "react";
-import SearchParams from "./SearchParams.jsx";
+import SearchParams from "./SearchParams";
 
-const Details = lazy(() => import("./Details.jsx"));
+const Details = lazy(() => import("./Details"));
 const App = () => {
   return (
     <React.StrictMode>

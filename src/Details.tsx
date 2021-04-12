@@ -1,9 +1,9 @@
 import pet, { Photo } from "@frontendmasters/pet";
 import { navigate, RouteComponentProps } from "@reach/router";
-import React, { lazy } from "react";
-import Carousel from "./Carousel.js";
-import ErrorBoundary from "./ErrorBoundary.js";
-const Modal = lazy(() => import("./Modal.jsx"));
+import React from "react";
+import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
+import Modal from "./Modal";
 
 class Details extends React.Component<RouteComponentProps<{ id: string }>> {
   public state = {

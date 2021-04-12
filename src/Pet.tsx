@@ -28,3 +28,5 @@ const Pet: FunctionComponent<IProps> = (props) => {
     </a>
   );
 };
+
+export default Pet;
